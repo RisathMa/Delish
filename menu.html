@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish Cake Menu</title>
+  <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-circle logo-pulse">
+                        <img src="Logo.png" alt="My Company Logo" class="logo-icon custom-logo">
+                    </div>
+                    <span class="brand-name animate-shine">Delish Cake</span>
+                </a>
+                <div class="nav-links">
+                    <div class="desktop-menu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="menu.html" class="nav-link active">Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+          <button id="cart-btn" class="cart-button" aria-label="Cart">
+          </button>
+
+          <button id="mobile-menu-btn" class="mobile-menu-button" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="close-cart" class="close-button">×</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <!-- Cart items will be added here dynamically -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="checkout-button">Checkout</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="menu-section">
+      <div class="container">
+        <div class="menu-header">
+          <h1 class="section-title">Our <span class="gradient-text">Delicious Menu</span></h1>
+          <p class="menu-description">Explore our selection of handcrafted cakes and pastries, made with the finest ingredients and love in every bite.</p>
+        </div>
+
+        <div class="category-filter">
+          <button class="category-btn active" data-category="all">All Items</button>
+          <button class="category-btn" data-category="birthday">Birthday Cakes</button>
+          <button class="category-btn" data-category="wedding">Wedding Cakes</button>
+          <button class="category-btn" data-category="cupcakes">Cupcakes</button>
+          <button class="category-btn" data-category="pastries">Pastries</button>
+        </div>
+
+        <div id="menu-container" class="menu-container">
+          <!-- Menu items will be added here dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <img src="Logo.png" alt="My Company Logo" class="logo-icon custom-logo">
+                    </div>
+                    <span class="brand-name">Delish Cake</span>
+                </div>
+                <p>Handcrafted cakes and pastries for every special moment.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>62/1/A Bauddhaloka Mawatha, Gampaha.</li>
+                        <li>Phone: (+94)702048067</li>
+                        <li>Email: risath.manvidu50@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Monday - Friday: 8am - 9pm</li>
+                        <li>Saturday: 9am - 7pm</li>
+                        <li>Sunday: 10am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Delish Cake. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+  <div id="overlay" class="overlay"></div>
+
+  <style>
+    .menu-section {
+      padding: 4rem 0;
+    }
+    
+    .menu-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .menu-description {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--muted-foreground-color);
+      font-size: 1.125rem;
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>
